@@ -38,49 +38,20 @@ CloudFront distribution will be added after AWS account verification is complete
 
 
 
-\## ☁️ Architecture
-
-
+## ☁️ Architecture
 
 The current architecture uses Amazon S3 Static Website Hosting to serve the portfolio website directly to visitors.
 
+![AWS S3 Static Website Architecture](architecture-diagram.png)
 
+### How It Works
 
-!\[AWS S3 Static Website Architecture](architecture-diagram.png)
+1. The user accesses the Amazon S3 website endpoint.
+2. Amazon S3 serves `index.html` as the main webpage.
+3. The browser loads `style.css` for the website design.
+4. Certificate and badge images are loaded from the `images/` folder.
+5. The S3 bucket policy provides public read access to the website files.
 
+### Future Architecture — CloudFront
 
-
-\### Current Architecture
-
-
-
-```text
-
-&#x20;                   User / Browser
-
-&#x20;                        │
-
-&#x20;                        │ HTTP Request
-
-&#x20;                        ▼
-
-&#x20;             ┌──────────────────────┐
-
-&#x20;             │      Amazon S3        │
-
-&#x20;             │  Static Website       │
-
-&#x20;             │      Hosting          │
-
-&#x20;             └──────────┬───────────┘
-
-&#x20;                        │
-
-&#x20;             ┌──────────┼──────────┐
-
-&#x20;             │          │          │
-
-&#x20;             ▼          ▼          ▼
-
-&#x20;         index.html  style.css   images/
-
+CloudFront is planned as the next stage of the project after AWS account verification is completed.
