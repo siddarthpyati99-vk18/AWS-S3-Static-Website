@@ -1,0 +1,18 @@
+# AWS credentials and private keys
+*.pem
+*.ppk
+.aws/
+credentials
+
+# VS Code
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
