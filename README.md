@@ -52,6 +52,24 @@ The current architecture uses Amazon S3 Static Website Hosting to serve the port
 4. Certificate and badge images are loaded from the `images/` folder.
 5. The S3 bucket policy provides public read access to the website files.
 
+## 📸 AWS Project Screenshots
+
+### S3 Bucket
+
+![S3 Bucket](screenshots/s3-bucket.png)
+
+### Static Website Hosting
+
+![Static Website Hosting](screenshots/static-website-hosting.png)
+
+### Bucket Policy
+
+![Bucket Policy](screenshots/bucket-policy.png)
+
+### Live Website
+
+![Live Website](screenshots/live-website.png)
+
 ### Future Architecture — CloudFront
 
 CloudFront is planned as the next stage of the project after AWS account verification is completed.
